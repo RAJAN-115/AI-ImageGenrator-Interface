@@ -1,13 +1,33 @@
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
 .image-generator-container {
     display: grid;
+    /* Defines rows: 60px header, a flexible main area, and 60px footer */
     grid-template-rows: 60px 1fr 60px;
+    /* Defines columns: 250px sidebar, a flexible main area */
     grid-template-columns: 250px 1fr;
+    /* Names the areas to make the layout easy to read */
     grid-template-areas:
         "header  header"
         "sidebar main"
         "footer  footer";
+    width: 100%;
+    max-width: 900px;
+    height: 90vh;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
-
+/* Item Placement with grid-area */
 .header {
     grid-area: header;
     background-color: #333;
@@ -32,11 +52,26 @@
     max-width: 100%;
     height: auto;
 }
-
 .input-footer {
     grid-area: footer;
     background-color: #eee;
     padding: 1rem;
     display: flex;
     gap: 1rem;
+}
+/* New section using the repeat() function */
+.image-gallery {
+    /* Using repeat() to create three equal-width columns */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    /* We need to place this new item in the main area of the grid */
+    grid-area: main;
+    overflow-y: auto;
+}
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
