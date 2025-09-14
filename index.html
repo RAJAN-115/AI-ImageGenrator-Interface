@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="image-generator-container">
+        <header class="header">
+            <h1>AI Image Generator</h1>
+        </header>
+        <section class="controls-sidebar">
+            <div class="control-panel">
+                <h3>Settings</h3>
+                <label for="style">Style:</label>
+                <select id="style">
+                    <option value="photorealistic">Photorealistic</option>
+                    <option value="watercolor">Watercolor</option>
+                    <option value="pixel-art">Pixel Art</option>
+                </select>
+            </div>
+        </section>
+        <section class="main-image-area">
+            <div class="image-display">
+                <img src="https://via.placeholder.com/500x500" alt="Generated Image">
+            </div>
+        </section>
+        <footer class="input-footer">
+            <input type="text" placeholder="Enter your prompt here...">
+            <button>Generate</button>
+        </footer>
+    </main>
+</body>
+</html>
